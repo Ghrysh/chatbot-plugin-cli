@@ -25,7 +25,7 @@ const chalk       = require('chalk');
 // │ Ganti URL ini dengan URL production API FutureCloud Anda.    │
 // │ Sama dengan nilai BASE_URL di lib/licenseVerifier.js.        │
 // └──────────────────────────────────────────────────────────────┘
-const API_URL = 'http://localhost:8001/api/v1';
+const API_URL = 'http://localhost:8081/api/v1';
 
 // ── Import modul baru (tidak mengganggu logika existing) ──────
 const { promptLicenseKey, verifyLicenseKey } = require('./lib/licenseVerifier');
@@ -76,9 +76,9 @@ program
       }
 
       if (verification.clientName) {
-        console.log(chalk.green(`✔ License key valid! Selamat datang, ${chalk.bold(verification.clientName)}.\n`));
+        console.log(chalk.green(`[SUCCESS] License key valid! Selamat datang, ${chalk.bold(verification.clientName)}.\n`));
       } else if (!verification.skipped) {
-        console.log(chalk.green('✔ License key berhasil diverifikasi!\n'));
+        console.log(chalk.green('[SUCCESS] License key berhasil diverifikasi!\n'));
       }
 
       // ══════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ program
 
       // ══ Summary ═══════════════════════════════════════════════
       console.log(chalk.bold.green('\n╔═══════════════════════════════════════╗'));
-      console.log(chalk.bold.green('║         ✔  Instalasi Selesai!           ║'));
+      console.log(chalk.bold.green('║         [SUCCESS]  Instalasi Selesai!           ║'));
       console.log(chalk.bold.green('╚═══════════════════════════════════════╝\n'));
 
       console.log(chalk.white('  Ringkasan:'));
