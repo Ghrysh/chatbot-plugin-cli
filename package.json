@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": {
     "futurecloud-chatbot": "./index.js",
-    "fc-cb": "./index.js"
+    "fc-cb": "./index.js",
+    "fc": "./fc.js"
   },
   "scripts": {
     "start": "node index.js",
