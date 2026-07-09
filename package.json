@@ -4,7 +4,8 @@
   "description": "FutureCloud Chatbot Plugin CLI — Install chatbot widget ke Laravel, React, Vue, atau HTML",
   "main": "index.js",
   "bin": {
-    "futurecloud-chatbot": "./index.js"
+    "futurecloud-chatbot": "./index.js",
+    "fc-cb": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
