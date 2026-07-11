@@ -25,7 +25,7 @@ const chalk       = require('chalk');
 // │ Ganti URL ini dengan URL production API FutureCloud Anda.    │
 // │ Sama dengan nilai BASE_URL di lib/licenseVerifier.js.        │
 // └──────────────────────────────────────────────────────────────┘
-const API_URL = 'http://localhost:8081/api/v1';
+const API_URL = 'https://api-chatbot.futurecloud.id/api/v1';
 
 // ── Import modul baru (tidak mengganggu logika existing) ──────
 const { promptLicenseKey, verifyLicenseKey } = require('./lib/licenseVerifier');
@@ -123,7 +123,7 @@ program
       }
 
       // ══ LANGKAH 4: Auto-Routing & Panduan ════════════════════
-      await runRouteAdvisor(frameworkMeta, deployedPath);
+      await runRouteAdvisor(frameworkMeta, deployedPath, licenseKey);
 
       // ══ Summary ═══════════════════════════════════════════════
       console.log(chalk.bold.green('\n╔═══════════════════════════════════════╗'));
@@ -136,11 +136,8 @@ program
       console.log(chalk.gray(`  • .env        : diperbarui dengan FUTURECLOUD_LICENSE_KEY`));
       console.log(chalk.gray(`  • API URL     : ${API_URL}\n`));
 
-      console.log(chalk.cyan('  Butuh bantuan? Kunjungi dokumentasi kami di:'));
-      // ┌─ KUSTOMISASI ────────────────────────────────────────────┐
-      // │ Ganti URL dokumentasi dengan link yang sesuai.           │
-      // └──────────────────────────────────────────────────────────┘
-      console.log(chalk.underline('  https://docs.futurecloud.id/chatbot-plugin\n'));
+      console.log(chalk.cyan('  Butuh bantuan? Jalankan perintah berikut di terminal:'));
+      console.log(chalk.yellow('  futurecloud-chatbot --help\n'));
 
     } catch (error) {
       console.error(chalk.red('\n✖ Error selama instalasi:'), error.message);
