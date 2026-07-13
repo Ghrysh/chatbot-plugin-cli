@@ -133,6 +133,8 @@
                 messages: [],
                 botName: 'Chatbot Ai',
                 botColor: '#2563eb',
+                isActive: false,
+                isActive: true,
 
                 init() {
                     let saved = localStorage.getItem('fc_chat_state');
@@ -150,6 +152,7 @@
                         .then(data => {
                             if (data.bot_name) this.botName = data.bot_name;
                             if (data.bot_color) this.botColor = data.bot_color;
+                            if (data.is_active !== undefined) this.isActive = data.is_active;
                         }).catch(e => console.error(e));
                     }
                 },

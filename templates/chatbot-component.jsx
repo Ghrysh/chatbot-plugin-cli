@@ -164,6 +164,7 @@ export default function FutureCloudChatbot() {
         messages: [],
                 botName: 'Chatbot Ai',
                 botColor: '#2563eb',
+                isActive: true,
 
         init() {
             this.loadState();

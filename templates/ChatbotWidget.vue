@@ -163,6 +163,8 @@ export default {
         messages: [],
                 botName: 'Chatbot Ai',
                 botColor: '#2563eb',
+                isActive: false,
+                isActive: true,
 
         init() {
             this.loadState();
