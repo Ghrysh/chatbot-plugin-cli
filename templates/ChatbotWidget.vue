@@ -32,7 +32,7 @@ export default {
 <div x-data="chatbot()" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[999] font-sans">
     
     <button @click="toggleChat()" :class="isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'" 
-        class="w-14 h-14 bg-gradient-to-r from-teal-500 to-indigo-600 rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 hover:shadow-indigo-300 transition-all duration-300 absolute bottom-0 right-0">
+        :style="`background-color: ${botColor}`" class="w-14 h-14  rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 hover:shadow-indigo-300 transition-all duration-300 absolute bottom-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
         <span x-show="unread > 0" class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[0.5625rem] font-bold text-white shadow-sm" x-text="unread" style="display: none;"></span>
     </button>
@@ -47,7 +47,7 @@ export default {
          style="display: none;" 
          class="absolute bottom-0 right-0 w-[calc(100vw-2rem)] sm:w-[23.75rem] h-[34.375rem] max-h-[85vh] bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.2)] border border-slate-100 flex flex-col overflow-hidden">
         
-        <div class="bg-gradient-to-r from-teal-500 to-indigo-600 p-3 sm:p-4 flex items-center justify-between shadow-md z-10 shrink-0">
+        <div class=" p-3 sm:p-4 flex items-center justify-between shadow-md z-10 shrink-0">
             <div class="flex items-center gap-2 sm:gap-3">
                 <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-base sm:text-xl shadow-inner border border-white/30">🤖</div>
                 <div>
@@ -161,6 +161,8 @@ export default {
         livePollInterval: null,
 
         messages: [],
+                botName: 'Chatbot Ai',
+                botColor: '#2563eb',
 
         init() {
             this.loadState();
