@@ -50,9 +50,9 @@ program
   .action(async (options) => {
 
     // ══ Banner ════════════════════════════════════════════════
-    console.log(chalk.bold.cyan('\n╔═══════════════════════════════════════╗'));
-    console.log(chalk.bold.cyan('║   FutureCloud Chatbot Plugin Installer  ║'));
-    console.log(chalk.bold.cyan('╚═══════════════════════════════════════╝\n'));
+    console.log(chalk.cyan('\n╔═══════════════════════════════════════╗'));
+    console.log(chalk.cyan('║   FutureCloud Chatbot Plugin Installer  ║'));
+    console.log(chalk.cyan('╚═══════════════════════════════════════╝\n'));
 
     try {
       
@@ -134,9 +134,9 @@ program
       }
 
       // ══ Summary ═══════════════════════════════════════════════
-      console.log(chalk.bold.green('\n╔═══════════════════════════════════════╗'));
-      console.log(chalk.bold.green('║         [SUCCESS]  Instalasi Selesai!           ║'));
-      console.log(chalk.bold.green('╚═══════════════════════════════════════╝\n'));
+      console.log(chalk.green('\n╔═══════════════════════════════════════╗'));
+      console.log(chalk.green('║         [SUCCESS]  Instalasi Selesai!           ║'));
+      console.log(chalk.green('╚═══════════════════════════════════════╝\n'));
 
       console.log(chalk.white('  Ringkasan:'));
       console.log(chalk.gray(`  • Framework  : ${frameworkMeta.name}`));
