@@ -1,6 +1,6 @@
 {
   "name": "futurecloud-chatbot-cli",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "FutureCloud Chatbot Plugin CLI — Install chatbot widget ke Laravel, React, Vue, atau HTML",
   "main": "index.js",
   "bin": {
