@@ -38,7 +38,7 @@ const { runRouteAdvisor }                     = require('./lib/routeAdvisor');
 
 program
   .name('fc-cb | futurecloud-chatbot')
-  .version('1.1.0')
+  .version(require('./package.json').version)
   .description('FutureCloud Chatbot Plugin Installer');
 
 // ─── Command: install ─────────────────────────────────────────
